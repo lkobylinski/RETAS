@@ -29,6 +29,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -206,7 +207,7 @@ public abstract class TextPreprocessor {
         FileReader fr = null;
 
         try {
-            fr = new FileReader(file);
+            fr = new FileReader(file, StandardCharsets.UTF_8);
 
             int theChar;
             bufc = new StringBuffer();
